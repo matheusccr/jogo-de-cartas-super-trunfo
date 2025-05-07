@@ -12,6 +12,8 @@ int main () {
   //densidade populacional e PIB (nivel aventureiro)
     float densidade1, densidade2;
     float PIB_percapta1, PIB_percapta2;
+  //super poder do nivel mestre
+    float superPoder1, superPoder2;
      
 printf ("Ola, bem vindo ao jogo de cartas Super Trunfo-Paises. \n");
 
@@ -81,8 +83,10 @@ scanf("%d", &pontos_turisticos2);
 //impressao das cartas 01 e 02 cadastradas pelo usuario
 
 printf("Parabéns, você terminou o cadastro das cartas, por favor verifique-as abaixo.\n");
+printf("\n");// espaço para organizar a saida
 
 //carta 01
+printf("\n");
 
 printf("Carta 01\n"); //carta 01, resultado
 
@@ -101,7 +105,16 @@ printf("Carta 01\n"); //carta 01, resultado
 
   PIB_percapta1= PIB_1/(float)populacao1;
   printf("PIB per capta: %.2f reais\n", PIB_percapta1);
+
+  // super poder 
+
+ superPoder1 = (float) populacao1 + area1 + PIB_1 + (float) pontos_turisticos1 + PIB_percapta1 + (1/densidade1);
+ printf("Super Poder: %f \n", superPoder1);
+
+ printf("\n");
+
 //carta 02  
+ printf("\n");
 
 printf("Carta 02\n"); //carta 02, resultado
    printf("Estado: %c\n", estado2);
@@ -120,6 +133,31 @@ printf("Carta 02\n"); //carta 02, resultado
 
  PIB_percapta2= PIB_2/(float)populacao2;
  printf("PIB per capta: %.2f reais\n", PIB_percapta2);
+
+  // super poder 
+
+ superPoder2 = (float) populacao2 + area2 + PIB_2 + (float) pontos_turisticos2 + PIB_percapta2 + (1/densidade2);
+ printf("Super Poder: %f \n", superPoder1);
+ printf("\n");
+
+
+// Comparaçao entre os atributos 
+printf("Comparação de cartas.\n");
+
+printf("Se 1= carta 1 venceu, se 2= carta 2 venceu.\n");
+printf("\n");
+ 
+printf("Populaçao: %d\n", (int)populacao1>populacao2);
+printf("Area: %d\n", (int)area1>area2);
+printf("PIB: %d\n",(int)PIB_1>PIB_2);
+printf("Pontos turisticos: %d\n", (int)pontos_turisticos1>pontos_turisticos2);
+printf("Densidade Populacional: %d\n", (int)densidade1<densidade2);
+printf("PIB per capta: %d\n", (int)PIB_percapta1>PIB_percapta2);
+printf("Super Poder: %d\n", (int)superPoder1>superPoder2);
+
+
+
+
 
 return 0;
 
