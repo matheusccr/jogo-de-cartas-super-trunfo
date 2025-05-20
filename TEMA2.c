@@ -37,7 +37,7 @@ printf("Digite o codigo da carta (letra do estado + numero da cidade): ");
 scanf("%s", &codigo_carta1);
 
 printf("Digite a população (sem pontuaçao, apenas numeros): ");
-scanf("%d", &populacao1);
+scanf("%ld", &populacao1);
 
 printf("Digite a área da cidade : ");
 scanf("%f", &area1);
@@ -67,7 +67,7 @@ printf("Digite o codigo da carta (letra do estado + numero da cidade): ");
 scanf("%s", &codigo_carta2);
 
 printf("Digite a população (sem pontuaçao, apenas numeros): ");
-scanf("%d", &populacao2);
+scanf("%ld", &populacao2);
 
 printf("Digite a área da cidade : ");
 scanf("%f", &area2);
@@ -94,7 +94,7 @@ printf("Carta 01\n"); //carta 01, resultado
   printf("Cidade: %s\n", cidade1);
   printf("Nº da cidade: %d\n", codigo_cidade1);
   printf("Codigo da carta: %s\n", codigo_carta1);
-  printf("Populção: %d habitantes\n", populacao1);
+  printf("Populção: %ld habitantes\n", populacao1);
   printf("Área: %.2f km²\n", area1);
   printf("PIB: R$ %.2f\n", PIB_1);
   printf("Nº de pontos turísticos: %d\n", pontos_turisticos1);  
@@ -117,11 +117,11 @@ printf("Carta 01\n"); //carta 01, resultado
  printf("\n");
 
 printf("Carta 02\n"); //carta 02, resultado
-   printf("Estado: %c\n", estado2);
+   printf("Estado: %s\n", estado2);
    printf("Cidade: %s\n", cidade2);
    printf("Nº da cidade: %d\n", codigo_cidade2);
    printf("Codigo da carta: %s\n", codigo_carta2);
-   printf("Populção: %d habitantes\n", populacao2);
+   printf("Populção: %ld habitantes\n", populacao2);
    printf("Área: %.2f km²\n", area2);
    printf("PIB: R$ %.2f\n", PIB_2);
    printf("Nº de pontos turísticos: %d\n", pontos_turisticos2);
@@ -146,8 +146,8 @@ printf("Comparação de cartas.\n");
 
 printf("\n");
  
-printf("Populaçao: %d\n");
-    if ((int)populacao1>populacao2){
+printf("Populaçao: \n");
+    if (populacao1>populacao2){
          printf ("Carta 1 venceu.\n");
     } else {
         printf("Carta 2 venceu.\n");
@@ -189,6 +189,7 @@ printf("Super Poder: \n");
     } else {
         printf("Carta 2 venceu.\n");
     }
-printf("\n");
+    
+}
 
 
